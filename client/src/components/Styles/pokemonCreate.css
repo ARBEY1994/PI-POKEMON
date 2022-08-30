@@ -1,0 +1,279 @@
+.backgraundCreate {
+  background-repeat: repeat;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./imagenes/Pikachu-Wallpapers.jpg");
+  overflow: hidden;
+  position: fixed;
+  animation: movimiento 10s infinite linear alternate;
+}
+
+.homeCreate {
+  position: absolute;
+  bottom: 82%;
+  left: 1%;
+  background: linear-gradient(
+    100deg,
+    rgb(235, 235, 207) 25%,
+    rgb(199, 199, 18) 50%,
+    rgb(235, 235, 207) 75%
+  );
+  background-repeat: repeat;
+  padding: 4px;
+  display: grid;
+  font-weight: bold;
+  margin: 0.5rem;
+  border-radius: 10px;
+  animation: anime 5s linear infinite;
+}
+@keyframes anime {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -80rem 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.homeCreate:hover {
+  background: linear-gradient(
+    100deg,
+    rgb(56, 56, 20) 25%,
+    rgb(199, 199, 18) 50%,
+    rgb(87, 87, 42) 75%
+  );
+}
+.cretatebutton {
+  position: absolute;
+  bottom: 82%;
+  right: 2%;
+  background: linear-gradient(
+    100deg,
+    rgb(235, 235, 207) 25%,
+    rgb(199, 199, 18) 50%,
+    rgb(235, 235, 207) 75%
+  );
+  background-repeat: repeat;
+  padding: 4px;
+  display: grid;
+  font-weight: bold;
+  margin: 0.5rem;
+  border-radius: 10px;
+  animation: anime 5s linear infinite;
+}
+@keyframes anime {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -80rem 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.cretatebutton:hover {
+  background: linear-gradient(
+    100deg,
+    rgb(56, 56, 20) 25%,
+    rgb(199, 199, 18) 50%,
+    rgb(87, 87, 42) 75%
+  );
+}
+.Create2 {
+  background-color: rgb(53, 53, 4);
+  padding: 0.5rem;
+  height: calc(100vh-11rem);
+  display: grid;
+  place-items: center;
+  border-radius: 1.5rem;
+}
+.borderCreate2 {
+  background: linear-gradient(
+    100deg,
+    rgb(235, 235, 207) 25%,
+    rgb(199, 199, 18) 50%,
+    rgb(235, 235, 207) 75%
+  );
+  background-repeat: repeat;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 2rem;
+  animation: anime 5s linear infinite;
+}
+@keyframes anime {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -80rem 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.degraCreate2 {
+  background-image: linear-gradient(
+    45deg,
+    rgb(201, 201, 33),
+    rgb(185, 185, 162)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #c4cf23;
+}
+h1 span {
+  position: absolute;
+  right: 0;
+  width: 0;
+  background: transparent;
+  border-left: 2px solid #000;
+  animation: title 5s infinite alternate steps(38);
+}
+@keyframes title {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.formName {
+  display: flexbox;
+  flex-direction: row;
+  position: absolute;
+  left: 40%;
+  bottom: 80%;
+}
+
+.formName input {
+  background: none;
+  outline: 0;
+}
+.hpStyle {
+  display: flexbox;
+  flex-direction: row;
+  position: absolute;
+  left: 40%;
+  bottom: 75%;
+}
+.hpStyle input {
+  background: none;
+  outline: 0;
+}
+.attact2 {
+  display: flexbox;
+  flex-direction: row;
+  position: absolute;
+  left: 40%;
+  bottom: 70%;
+}
+.attact2 input {
+  background: none;
+  outline: 0;
+}
+.defense {
+  display: flexbox;
+  flex-direction: row;
+  position: absolute;
+  left: 40%;
+  bottom: 65%;
+}
+.defense input {
+  background: none;
+  outline: 0;
+}
+.speed {
+  display: flexbox;
+  flex-direction: row;
+  position: absolute;
+  left: 40%;
+  bottom: 60%;
+}
+.speed input {
+  background: none;
+  outline: 0;
+}
+.height {
+  display: flexbox;
+  flex-direction: row;
+  position: absolute;
+  left: 40%;
+  bottom: 55%;
+}
+.height input {
+  background: none;
+  outline: 0;
+}
+.weight {
+  display: flexbox;
+  flex-direction: row;
+  position: absolute;
+  left: 40%;
+  bottom: 50%;
+}
+.weight input {
+  background: none;
+  outline: 0;
+}
+.imagen {
+  display: flexbox;
+  flex-direction: row;
+  position: absolute;
+  left: 40%;
+  bottom: 45%;
+}
+.imagen input {
+  background: none;
+  outline: 0;
+}
+.typesele {
+  position: absolute;
+  bottom: 78%;
+  left: 71%;
+  grid-column: 1 / 3;
+  grid-row: 5;
+  font-family: poke;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  margin: 10px;
+  background: linear-gradient(
+    100deg,
+    rgb(129, 129, 10) 25%,
+    rgb(165, 165, 12) 50%,
+    rgb(235, 235, 207) 75%
+  );
+}
+.typesele:hover {
+  background: linear-gradient(
+    100deg,
+    rgb(56, 56, 20) 25%,
+    rgb(199, 199, 18) 50%,
+    rgb(87, 87, 42) 75%
+  );
+}
+.ul {
+  position: absolute;
+  bottom: 2%;
+  left: 80%;
+}
+.labe {
+  position: absolute;
+  left: 58%;
+  bottom: 80%;
+}
+.errors {
+  color: red;
+}

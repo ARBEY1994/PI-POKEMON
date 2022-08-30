@@ -1,0 +1,160 @@
+.background {
+  height: 100%;
+  width: 100%;
+  background-image: url("../Styles/imagenes/bolaPoke.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: fixed;
+  animation: movimiento 10s infinite linear alternate;
+}
+@keyframes movimiento {
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: top right;
+  }
+}
+
+.button {
+  position: relative;
+  top: 30%;
+  display: inline-block;
+  padding: 15px 30px;
+  color: rgb(107, 146, 34);
+  letter-spacing: 4px;
+  font-size: 24px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+  border-color: #c4cf23;
+  font-weight: bold;
+  border-radius: 30px;
+  background-color: transparent;
+}
+.button:hover {
+  background: #c4cf23;
+  color: beige;
+  box-shadow: 0 0 10px #c4cf23, 0 0 40px #c4cf23, 0 0 80px #c4cf23;
+  transition-delay: 1s;
+}
+.button span {
+  position: absolute;
+  display: block;
+}
+#span1 {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #c4cf23);
+}
+.button:hover #span1 {
+  left: 100%;
+  transition: 1s;
+}
+#span3 {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #c4cf23);
+}
+.button:hover #span3 {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+#span2 {
+  top: -100%;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #c4cf23);
+}
+.button:hover #span2 {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+#span4 {
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #c4cf23);
+}
+.button:hover #span4 {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+.title {
+  background-color: rgb(53, 53, 4);
+  padding: 1rem;
+  height: calc(100vh-11rem);
+  display: grid;
+  place-items: center;
+  border-radius: 1.5rem;
+}
+.border {
+  background: linear-gradient(
+    100deg,
+    rgb(235, 235, 207) 25%,
+    rgb(199, 199, 18) 50%,
+    rgb(235, 235, 207) 75%
+  );
+  background-repeat: repeat;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 2rem;
+  animation: anime 5s linear infinite;
+}
+@keyframes anime {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -80rem 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.degradado {
+  background-image: linear-gradient(
+    45deg,
+    rgb(201, 201, 33),
+    rgb(185, 185, 162)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #c4cf23;
+}
+h1 span {
+  position: absolute;
+  right: 0;
+  width: 0;
+  background: transparent;
+  border-left: 2px solid #000;
+  animation: title 5s infinite alternate steps(38);
+}
+@keyframes title {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
