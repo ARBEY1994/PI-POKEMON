@@ -60,10 +60,14 @@ export default function PokemonCreate() {
   }
 
   function handleSelect(e) {
-    setInput({
-      ...input,
-      types: [...input.types, e.target.value],
-    });
+    if (!input.types.includes(e.target.value)) {
+      setInput({
+        ...input,
+        types: [...input.types, e.target.value],
+      });
+    } else {
+      alert("Please select another type!");
+    }
   }
   function handleSubmit(e) {
     console.log(input);
@@ -76,21 +80,25 @@ export default function PokemonCreate() {
     } else if (!input.imagen) {
       e.preventDefault();
       alert("¡please enter a valid url!");
+    } else if (!input.hp || input.hp < 0 || input.hp > 100) {
+      e.preventDefault();
+      alert("¡please enter a valid hp!");
+    } else {
+      dispatch(postPokemon(input));
+      alert("pokemon created successfully!!");
+      setInput({
+        name: "",
+        hp: Number(),
+        attack: Number(),
+        defense: Number(),
+        speed: Number(),
+        height: Number(),
+        weight: Number(),
+        imagen: "",
+        types: [],
+      });
     }
 
-    dispatch(postPokemon(input));
-    alert("pokemon created successfully!!");
-    setInput({
-      name: "",
-      hp: Number(),
-      attack: Number(),
-      defense: Number(),
-      speed: Number(),
-      height: Number(),
-      weight: Number(),
-      imagen: "",
-      types: [],
-    });
     history.push("/home");
   }
 
@@ -219,7 +227,7 @@ export default function PokemonCreate() {
         </div>
         <select className="typesele" onChange={(e) => handleSelect(e)}>
           {Types.map((e) => (
-            <option value={e.name}>{e.name}</option>
+            <option value={e}>{e}</option>
           ))}
           {err.types && <span className="errors">{err.types}</span>}
         </select>
@@ -228,7 +236,7 @@ export default function PokemonCreate() {
             {input.types.map((e) => (
               <div>
                 <h5>
-                  {Types?.find((p) => p.name === e)?.name}
+                  {Types?.find((p) => p === e)}
                   <button onClick={() => handleDelete(e)}>X</button>
                 </h5>
               </div>

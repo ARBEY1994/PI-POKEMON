@@ -32,6 +32,7 @@ const getApi = async () => {
     console.log(error);
   }
 };
+
 const getDataBase = async () => {
   try {
     return await Pokemon.findAll({

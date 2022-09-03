@@ -39,13 +39,21 @@ function rootReducer(state = initialState, action) {
       };
 
     case GET_TYPES:
+      let info = action.payload;
+      let arrayp = [];
+      info.forEach((e) => {
+        if (!arrayp.includes(e.name)) {
+          arrayp.push(e.name);
+        }
+      });
       return {
         ...state,
-        types: action.payload,
+        types: arrayp,
       };
 
     case FILTER_BY_TYPE:
       const allPokTypes = state.filterPokemons;
+
       const FilterPokemonType =
         action.payload === "all"
           ? allPokTypes
@@ -73,7 +81,7 @@ function rootReducer(state = initialState, action) {
       };
 
     case ORDER_ALPHABETICAL:
-      let Order = [...state.pokemons];
+      let Order = state.pokemons;
       if (action.payload === "asc") {
         Order.sort((a, b) =>
           a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1
@@ -91,7 +99,7 @@ function rootReducer(state = initialState, action) {
       };
 
     case ATTACK_POWER_LEVEL:
-      let OrderAttack = [...state.pokemons];
+      let OrderAttack = state.pokemons;
       if (action.payload === "desc") {
         OrderAttack.sort((a, b) => (a.attack > b.attack ? -1 : 1));
       }

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { GetDetail } from "../redux/actions";
+import { GetDetail, GET_DETAIL } from "../redux/actions";
 import { Link, useParams } from "react-router-dom";
 import "../components/Styles/details.css";
 import loading from "./Styles/imagenes/loading.gif";
@@ -12,6 +12,9 @@ export default function PokemonDetail() {
   console.log(detailPok);
   useEffect(() => {
     dispatch(GetDetail(IdPok.id));
+    return () => {
+      dispatch({ type: GET_DETAIL, payload: {} });
+    };
   }, [dispatch]);
 
   return (

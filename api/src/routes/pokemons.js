@@ -6,6 +6,7 @@ const router = Router();
 
 router.get("/", async (req, res) => {
   const { name } = req.query;
+
   try {
     let infoP = await getAllInfo();
     if (name) {
@@ -74,6 +75,19 @@ router.post("/", async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(404).send(error);
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+
+  let infoOtal = await Pokemon.findOne({ where: { id: id } });
+
+  if (infoOtal) {
+    await Pokemon.destroy({ where: { id: id } });
+    res.send("SE BORRO PAUU");
+  } else {
+    res.send("NO ESTA EL POKEMON");
   }
 });
 

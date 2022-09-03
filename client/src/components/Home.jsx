@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   alphabeticalOrder,
   AttackPower,
@@ -82,28 +83,26 @@ export default function Home() {
           </h1>
         </div>
       </main>
-      <button
-        className="botonreload"
-        onClick={(e) => {
-          handleClick(e);
-        }}
-      >
-        <span id="span1"></span>
-        <span id="span2"></span>
-        <span id="span3"></span>
-        <span id="span4"></span>
-        Reload all pokemons
-      </button>
+      <div>
+        <button
+          className="botonreload"
+          onClick={(e) => {
+            handleClick(e);
+          }}
+        >
+          <span id="span1"></span>
+          <span id="span2"></span>
+          <span id="span3"></span>
+          <span id="span4"></span>
+          Reload all pokemons
+        </button>
+      </div>
       <div>
         <div>
           <select className="select4" onChange={(e) => handleFilterType(e)}>
             <option value="all">pokemon types</option>
             {AllTypes?.map((e) => {
-              return (
-                <option value={e.name} key={e.id}>
-                  {e.name}
-                </option>
-              );
+              return <option value={e}>{e}</option>;
             })}
           </select>
           <select
@@ -115,6 +114,7 @@ export default function Home() {
             <option value="api">existing</option>
           </select>
           <select className="select1" onChange={(e) => handleOrder(e)}>
+            <option value="All">Alphabetical Order</option>
             <option value="asc">Ascending order</option>
             <option value="desc">Descending order</option>
           </select>
@@ -125,11 +125,7 @@ export default function Home() {
           </select>
         </div>
         <SearchBar className="searchBar" />
-        <Paginado
-          pokemonForPage={pokemonForPage}
-          AllPokemons={AllPokemons.length}
-          paginado={paginado}
-        />
+
         <div className="homeCard">
           {currentPokemons?.map((e) => {
             return (
@@ -144,6 +140,11 @@ export default function Home() {
             );
           })}
         </div>
+        <Paginado
+          pokemonForPage={pokemonForPage}
+          AllPokemons={AllPokemons.length}
+          paginado={paginado}
+        />
       </div>
     </div>
   );

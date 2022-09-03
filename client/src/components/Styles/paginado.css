@@ -1,20 +1,24 @@
 .paginado {
-  height: 210px;
-  width: 210px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: left;
+  flex-direction: row;
+  grid-column: 3 / 9;
+  grid-row: 2 / 14;
+  margin-left: auto;
+  margin-right: auto;
+  border: 20px;
+  position: relative;
+  bottom: 5px;
 }
 
 .botonPaginado {
   position: relative;
   top: 50%;
   display: inline-block;
-  padding: 10px 15px;
-  color: rgb(107, 146, 34);
+  padding: 10px 10px;
+  color: rgb(14, 19, 6);
   letter-spacing: 4px;
-  font-size: 15px;
+  font-size: 19px;
   text-decoration: none;
   overflow: hidden;
   transition: 0.2s;
