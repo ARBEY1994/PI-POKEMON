@@ -12,10 +12,11 @@ export default function PokemonDetail() {
   console.log(detailPok);
   useEffect(() => {
     dispatch(GetDetail(IdPok.id));
+
     return () => {
       dispatch({ type: GET_DETAIL, payload: {} });
     };
-  }, [dispatch]);
+  }, [dispatch, IdPok.id]);
 
   return (
     <div className="background2">
