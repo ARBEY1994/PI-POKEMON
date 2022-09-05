@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import { postPokemon, getTypes } from "../redux/actions";
 import "./Styles/pokemonCreate.css";
 
 export default function PokemonCreate() {
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   const Types = useSelector((state) => state.types);
   const [err, setError] = useState({});
   const [input, setInput] = useState({
@@ -99,7 +100,7 @@ export default function PokemonCreate() {
       });
     }
 
-    history.push("/home");
+    navigate("/home");
   }
 
   function handleDelete(el) {
