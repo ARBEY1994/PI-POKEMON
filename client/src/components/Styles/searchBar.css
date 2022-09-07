@@ -4,10 +4,13 @@
   position: relative;
   left: 30px;
   bottom: 67px;
-  /* width: 100%;
-  height: 50%;
-  max-width: 300px;
-  overflow: hidden; */
+}
+@media screen and (max-width: 600px) {
+  .search {
+    position: absolute;
+    left: 10%;
+    bottom: 80%;
+  }
 }
 .search input {
   background: none;
@@ -28,6 +31,11 @@
   font-weight: bold;
 
   background-color: transparent;
+}
+@media screen and (max-width: 600px) {
+  .botonsearh {
+    font-size: 10px;
+  }
 }
 .botonsearh:hover {
   background: #c4cf23;

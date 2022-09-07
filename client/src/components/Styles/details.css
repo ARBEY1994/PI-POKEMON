@@ -17,6 +17,15 @@
   margin: 30px;
   left: 18%;
 }
+@media screen and (max-width: 600px) {
+  .details {
+    position: relative;
+    width: 20rem;
+
+    margin: 30px;
+    left: 10%;
+  }
+}
 
 .details .face {
   position: absolute;
@@ -89,5 +98,15 @@
   }
   100% {
     background-position: 0 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .loading {
+    position: relative;
+    width: 20rem;
+
+    margin: 30px;
+    left: -10%;
   }
 }

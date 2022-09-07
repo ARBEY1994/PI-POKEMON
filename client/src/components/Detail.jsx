@@ -60,6 +60,7 @@ export default function PokemonDetail() {
           ) : (
             <div>
               <img
+                className="loading"
                 src={loading}
                 alt="pokemon not fount"
                 height="200px"

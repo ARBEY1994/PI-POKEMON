@@ -116,6 +116,10 @@ export default function PokemonCreate() {
 
   return (
     <div className="backgraundCreate">
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+      ></meta>
       <Link to="/home">
         {" "}
         <button className="homeCreate">Home</button>

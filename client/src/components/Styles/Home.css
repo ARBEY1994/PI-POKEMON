@@ -112,6 +112,16 @@ h1 span {
 
   background-color: transparent;
 }
+@media screen and (max-width: 600px) {
+  .botonreload {
+    position: relative;
+    top: 0%;
+    left: 90%;
+    padding: 2px 6px;
+    font-size: 10px;
+    color: black;
+  }
+}
 .botonreload:hover {
   background: #c4cf23;
   color: beige;
