@@ -18,7 +18,6 @@ server.use(cookieParser());
 server.use(morgan("dev"));
 server.use((req, res, next) => {
   res.header(
-    "Access-Control-Allow-Origin",
     "pi-pokemon-omega.vercel.app",
     "pi-pokemon-git-main-arbey1994.vercel.app",
     "pi-pokemon-arbey1994.vercel.app"
