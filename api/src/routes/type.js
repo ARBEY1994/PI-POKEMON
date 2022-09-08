@@ -16,6 +16,7 @@ router.get("/", async (req, res) => {
       });
     });
     let typesPokemon = await Types.findAll();
+    res.set("Access-Control-Allow-Origin", "*");
     res.status(200).send(typesPokemon);
   } catch (error) {
     res.status(404).send(error);
