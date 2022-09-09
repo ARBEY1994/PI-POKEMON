@@ -36,7 +36,7 @@
 } */
 .card .back {
   transform: perspective(600px) rotateY(180deg);
-  background: rgb(3, 35, 54);
+  background: rgb(48, 147, 204);
   padding: 15px;
   color: aliceblue;
   display: flex;
