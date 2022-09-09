@@ -9,7 +9,7 @@ const getApi = async () => {
     );
     const subApiInfo = await ApiInfo.data.results.map((e) => axios.get(e.url));
     let arrayINfo = [];
-    const pokeInfo = await Promise.all(subApiInfo).then((pokem) => {
+    const pokeInfo = await axios.all(subApiInfo).then((pokem) => {
       pokem.map((e) => {
         arrayINfo.push({
           id: e.data.id,
