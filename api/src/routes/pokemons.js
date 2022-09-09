@@ -78,17 +78,17 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
-  const { id } = req.params;
+// router.delete("/:id", async (req, res) => {
+//   const { id } = req.params;
 
-  let infoOtal = await Pokemon.findOne({ where: { id: id } });
+//   let infoOtal = await Pokemon.findOne({ where: { id: id } });
 
-  if (infoOtal) {
-    await Pokemon.destroy({ where: { id: id } });
-    res.send("SE BORRO PAUU");
-  } else {
-    res.send("NO ESTA EL POKEMON");
-  }
-});
+//   if (infoOtal) {
+//     await Pokemon.destroy({ where: { id: id } });
+//     res.send("SE BORRO PAUU");
+//   } else {
+//     res.send("NO ESTA EL POKEMON");
+//   }
+// });
 
 module.exports = router;
