@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />}></Route>
-          <Route path="/home" element={<Home />}></Route>
-          <Route path="/home/:id" element={<Detail />}></Route>
-          <Route path="/pokemon" element={<PokemonCreate />}></Route>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/home/:id" element={<Detail />} />
+          <Route path="/pokemon" element={<PokemonCreate />} />
         </Routes>
       </BrowserRouter>
     </div>
