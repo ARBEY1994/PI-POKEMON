@@ -10,7 +10,7 @@ require("./db.js");
 const server = express();
 
 server.name = "API";
-server.use(cors("Access-Control-Allow-Origin", "*"));
+server.use(cors({ Origin: "*" }));
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 server.use(bodyParser.json({ limit: "50mb" }));
 server.use(cookieParser());
