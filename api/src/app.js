@@ -8,9 +8,12 @@ const cors = require("cors");
 require("./db.js");
 
 const server = express();
-
+let array = [
+  "https://pi-pokemon-git-main-arbey1994.vercel.app",
+  "https://project-pokemon1.herokuapp.com",
+];
 server.name = "API";
-server.use(cors());
+server.use(cors(array));
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 server.use(bodyParser.json({ limit: "50mb" }));
 server.use(cookieParser());
@@ -21,10 +24,10 @@ server.use((req, res, next) => {
     "https://pi-pokemon-git-main-arbey1994.vercel.app"
   ); // update to match the domain you will make the request from
   res.header("Access-Control-Allow-Credentials", "true");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
+  // res.header(
+  //   "Access-Control-Allow-Headers",
+  //   ""
+  // );
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   next();
 });
