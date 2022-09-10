@@ -8,12 +8,9 @@ const cors = require("cors");
 require("./db.js");
 
 const server = express();
-let array = [
-  "https://pi-pokemon-git-main-arbey1994.vercel.app/",
-  "https://project-pokemon1.herokuapp.com/",
-];
+
 server.name = "API";
-server.use(cors({ origin: array }));
+server.use(cors("Access-Control-Allow-Origin", "*"));
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 server.use(bodyParser.json({ limit: "50mb" }));
 server.use(cookieParser());
