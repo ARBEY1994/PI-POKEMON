@@ -10,8 +10,7 @@ require("./db.js");
 const server = express();
 let array = [
   "https://pi-pokemon-git-main-arbey1994.vercel.app/",
-  "https://project-pokemon1.herokuapp.com/type",
-  "https://project-pokemon1.herokuapp.com/pokemons",
+  "https://project-pokemon1.herokuapp.com/",
 ];
 server.name = "API";
 server.use(cors({ origin: array }));
