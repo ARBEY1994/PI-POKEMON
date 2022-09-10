@@ -9,7 +9,8 @@ require("./db.js");
 
 const server = express();
 let array = [
-  "https://pi-pokemon-git-main-arbey1994.vercel.app/",
+  "https://pi-pokemon-git-main-arbey1994.vercel.app/pokemons",
+  "https://pi-pokemon-git-main-arbey1994.vercel.app/type",
   "https://project-pokemon1.herokuapp.com/",
 ];
 server.name = "API";
