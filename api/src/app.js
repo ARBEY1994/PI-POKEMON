@@ -13,7 +13,7 @@ let array = [
   "https://project-pokemon1.herokuapp.com",
 ];
 server.name = "API";
-server.use(cors(array));
+server.use(cors({ origin: array }));
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 server.use(bodyParser.json({ limit: "50mb" }));
 server.use(cookieParser());
