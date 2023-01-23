@@ -10,22 +10,30 @@ export const ATTACK_POWER_LEVEL = "ATTACK_POWER_LEVEL";
 
 export function getPokemons() {
   return async function (dispatch) {
-    var json = await axios.get("/pokemons");
-    return dispatch({
-      type: "GET_POKEMONS",
-      payload: json.data,
-    });
+    try {
+      var json = await axios.get("/pokemons");
+      return dispatch({
+        type: "GET_POKEMONS",
+        payload: json.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 }
 
 export function getTypes() {
   return async function (dispatch) {
-    var typesP = await axios.get("/type");
+    try {
+      var typesP = await axios.get("/type");
 
-    return dispatch({
-      type: "GET_TYPES",
-      payload: typesP.data,
-    });
+      return dispatch({
+        type: "GET_TYPES",
+        payload: typesP.data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 }
 
